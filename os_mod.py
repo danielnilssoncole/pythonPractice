@@ -34,3 +34,34 @@ from datetime import datetime
 #modified time
 # modified_time = os.stat('demo.txt').st_mtime
 # print datetime.fromtimestamp(modified_time)
+
+#os.walk returns dirpath dirnames and filenames for each dir
+# for dirpath, dirnames, filenames in os.walk(os.getcwd()):
+#     print 'Current Path: ', dirpath
+#     print 'Directories: ', dirnames
+#     print 'Files: ', filenames
+#     print 's'
+
+#environment variables
+# print os.environ.get('HOME')
+
+#os.path.join - joins two paths
+file_path = os.path.join(os.environ.get('HOME'), 'demo2.txt')
+# print file_path
+
+#os.path.basename - returns file name of path
+# print os.path.basename('/tmp/test.txt')
+
+#os.path.dirname - returns name of directory
+# print os.path.dirname('/tmp/test.txt')
+
+#os.path.split - returns tuple of dirname and basename
+# print os.path.split('/tmp/test.txt')
+
+#os.path.exists - checks if path exists
+# print os.path.exists('/tmp/test.txt')
+
+#os.path.isdir os.path.isfile - returns true or false if isfile or isdir
+
+#os.path.splitext - returns tuple of path root and file extension
+# print os.path.splitext('/tmp/test.txt')
