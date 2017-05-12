@@ -51,5 +51,26 @@ dt_utcnow = datetime.datetime.utcnow() #still naive
 dt = datetime.datetime(2017, 1, 2, 5, 30, 45, tzinfo=pytz.UTC)
 # print dt
 
-dt_now = datetime.datetime.now(tz=pytz.UTC)
-print dt_now
+dt_utcnow = datetime.datetime.now(tz=pytz.UTC)
+# print dt_utcnow
+
+#specifying timezone
+dt_mtn = dt_utcnow.astimezone(pytz.timezone('US/Mountain'))
+dt_pac = dt_utcnow.astimezone(pytz.timezone('US/Pacific'))
+# print dt_pac
+
+#print list of timezones
+# for tz in pytz.all_timezones:
+#     print tz
+
+#convert naive datetime to be timezone aware
+dt_locnaive = datetime.datetime.now() #naive
+east_tz = pytz.timezone('US/Eastern') #grab timezone
+#localize function takes in naive datetime and makes it aware
+dt_locaware = east_tz.localize(dt_locnaive)
+# print dt_locaware
+
+#use astimezone function to convert to different timezone
+#cannot run astimezone on naive datetime 
+dt_pac = dt_locaware.astimezone(pytz.timezone('US/Pacific'))
+print dt_pac
