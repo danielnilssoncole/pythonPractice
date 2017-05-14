@@ -71,6 +71,22 @@ dt_locaware = east_tz.localize(dt_locnaive)
 # print dt_locaware
 
 #use astimezone function to convert to different timezone
-#cannot run astimezone on naive datetime 
+#cannot run astimezone on naive datetime
 dt_pac = dt_locaware.astimezone(pytz.timezone('US/Pacific'))
-print dt_pac
+# print dt_pac
+
+dt_utcnow = datetime.datetime.now(tz=pytz.UTC)
+dt_east = dt_utcnow.astimezone(pytz.timezone('US/Eastern'))
+# print dt_east
+
+#display
+# print dt_east.isoformat()
+
+# print dt_east.strftime('%B %d, %Y %I:%M:%S %p')
+
+dt_str = 'May 13, 2017 08:54:22 PM'
+dt = datetime.datetime.strptime(dt_str, '%B %d, %Y %I:%M:%S %p')
+# print dt
+
+#strftime - datetime to string
+#strptime - string to datetime
