@@ -40,4 +40,11 @@ with open('test.txt', 'r') as f:
 #     f.write('Test')
 
 
-#copy from one file to another 
+#copy from one file to another
+with open('test.txt', 'r') as rf:
+    with open('test_copy.txt', 'w') as wf:
+        for line in rf:
+            wf.write(line)
+
+
+#working with image files: rb, wb
