@@ -16,15 +16,19 @@ def find_word(phrase, substr):
         print('did not find \'{}\''.format(substr))
 
 def find_emails(txt):
-    match = re.search(r'[\w.-]+@[\w.-]+', txt)
-    if match:
-        print('email: {}'.format(match.group()))
+    emails = re.findall(r'[\w.-]+@[\w.-]+', txt)
+    if emails:
+        for email in emails:
+            print(email)
     else:
         print('no emails')
+
+str = 'purple alice@google.com, blah monkey bob@abc.com blah dishwasher'
+find_emails(str)
 
 # phrase = input('Enter phrase: ')
 # substr = input('Enter search term: ')
 # find_word(phrase, substr)
 
-text = input('Enter text: ')
-find_emails(text)
+# text = input('Enter text: ')
+# find_emails(text)
