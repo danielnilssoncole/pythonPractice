@@ -2,3 +2,7 @@ DEBUG:root:Add: 10 + 5 = 15
 DEBUG:root:Sub: 10 + 5 = 5
 DEBUG:root:Mul: 10 + 5 = 50
 DEBUG:root:Div: 10 + 5 = 2.0
+2017-12-06 14:28:38,161:DEBUG:Add: 10 + 5 = 15
+2017-12-06 14:28:38,171:DEBUG:Sub: 10 + 5 = 5
+2017-12-06 14:28:38,171:DEBUG:Mul: 10 + 5 = 50
+2017-12-06 14:28:38,171:DEBUG:Div: 10 + 5 = 2.0
